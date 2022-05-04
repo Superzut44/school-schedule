@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta charset="UTF-8">
+  <title>Collège</title>
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <!DOCTYPE html>
+  <html lang="fr">
+  <html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Zoé</title>
+
+    <style>
+      /*https://unsplash.com/photos/1ytUKz_Ms8U
+      https://unsplash.com/photos/eMP4sYPJ9x0
+      https://cdn.pixabay.com/photo/2016/03/26/13/12/pencils-1280558_960_720.jpg
+      https://cdn.pixabay.com/photo/2018/04/14/02/40/paper-3318159_960_720.jpg
+      https://cdn.pixabay.com/photo/2019/06/10/11/35/learning-4264032_960_720.jpg
+      https://cdn.pixabay.com/photo/2018/02/23/10/31/paper-3175182_960_720.jpg
+      https://cdn.pixabay.com/photo/2018/04/14/02/40/education-3318158_960_720.jpg
+      https://cdn.pixabay.com/photo/2020/05/30/02/56/color-5237455_960_720.jpg
+      https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+      https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+      https://images.pexels.com/photos/1148399/pexels-photo-1148399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+      https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+      https://images.pexels.com/photos/1122530/pexels-photo-1122530.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500*/
+      body {
+        text-align: center;
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+        background: url("https://images.pexels.com/photos/1122530/pexels-photo-1122530.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat center fixed;
+        -webkit-background-size: cover;
+        /* pour anciens Chrome et Safari */
+        background-size: cover;
+        /* version standardisée */
+      }
+
+
+
+      caption {
+        font-size: 1.2em;
+      }
+
+      input {
+        height: 60px;
+        width: 300px;
+        font-size: 1.2em;
+        text-align: center
+      }
+
+
+      input:nth-last-of-type(1) {
+        font-size: 1em;
+      }
+
+      table {
+        box-sizing: content-box;
+        width: 100%;
+      }
+
+      tr:first-of-type th:nth-last-of-type(6) {
+        width: 5%;
+      }
+
+      tr:first-of-type th:nth-last-of-type(1),
+      tr:first-of-type th:nth-last-of-type(2),
+      tr:first-of-type th:nth-last-of-type(3),
+      tr:first-of-type th:nth-last-of-type(4),
+      tr:first-of-type th:nth-last-of-type(5) {
+        width: 10%;
+      }
+
+      #semaine {
+        padding-bottom: 3em;
+      }
+
+      #DemiPension {
+        border-collapse: collapse;
+        font-size: 1em;
+        table-layout: auto;
+        text-align: center;
+      }
+
+      #DemiPension td {
+        border: 1px solid #333;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+      }
+
+      tr:first-of-type th:first-of-type {
+        border-right: 1px solid #333;
+        border-bottom: 1px solid #333;
+      }
+
+      tr:first-of-type th:nth-last-of-type(2),
+      tr:first-of-type th:nth-last-of-type(3),
+      tr:first-of-type th:nth-last-of-type(4),
+      tr:first-of-type th:nth-last-of-type(5) {
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+        border-bottom: 1px solid #333;
+      }
+
+      tr:first-of-type th:last-of-type {
+        border-left: 1px solid #333;
+        border-bottom: 1px solid #333;
+      }
+
+      tr:nth-last-of-type(2) th,
+      tr:nth-last-of-type(3) th,
+      tr:nth-last-of-type(4) th,
+      tr:nth-last-of-type(5) th,
+      tr:nth-last-of-type(6) th,
+      tr:nth-last-of-type(7) th,
+      tr:nth-last-of-type(8) th,
+      tr:nth-last-of-type(9) th,
+      tr:nth-last-of-type(10) th {
+        border-bottom: 1px solid #333;
+        border-right: 1px solid #333;
+        border-top: 1px solid #333;
+      }
+
+      tr:last-of-type th {
+        border-top: 1px solid #333;
+        border-right: 1px solid #333;
+      }
+
+      th:first-of-type {
+        vertical-align: top;
+      }
+
+      /* si écran iphone */
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 0.7em;
+        }
+
+        caption {
+          font-size: 0.7em;
+        }
+
+        input {
+          height: 50px;
+          width: 150px;
+          font-size: 1.5em;
+          text-align: center
+        }
+
+        input:nth-last-of-type(1) {
+          font-size: 1em;
+        }
+
+        table {
+          box-sizing: content-box;
+          width: 400px;
+        }
+
+        tr:first-of-type th:nth-last-of-type(6) {
+          width: 10px;
+        }
+
+        tr:first-of-type th:nth-last-of-type(1),
+        tr:first-of-type th:nth-last-of-type(2),
+        tr:first-of-type th:nth-last-of-type(3),
+        tr:first-of-type th:nth-last-of-type(4),
+        tr:first-of-type th:nth-last-of-type(5) {
+          width: 48px;
+        }
+
+        #semaine {
+          padding-bottom: 1em;
+        }
+
+        #DemiPension {
+          border-collapse: collapse;
+          font-size: 0.6em;
+          table-layout: auto;
+          text-align: center;
+        }
+
+        #DemiPension td {
+          border: 1px solid #333;
+          padding-top: 0.3em;
+          padding-bottom: 0.3em;
+        }
+
+        tr:first-of-type th:first-of-type {
+          border-right: 1px solid #333;
+          border-bottom: 1px solid #333;
+        }
+
+        tr:first-of-type th:nth-last-of-type(2),
+        tr:first-of-type th:nth-last-of-type(3),
+        tr:first-of-type th:nth-last-of-type(4),
+        tr:first-of-type th:nth-last-of-type(5) {
+          border-left: 1px solid #333;
+          border-right: 1px solid #333;
+          border-bottom: 1px solid #333;
+        }
+
+        tr:first-of-type th:last-of-type {
+          border-left: 1px solid #333;
+          border-bottom: 1px solid #333;
+        }
+
+        tr:nth-last-of-type(2) th,
+        tr:nth-last-of-type(3) th,
+        tr:nth-last-of-type(4) th,
+        tr:nth-last-of-type(5) th,
+        tr:nth-last-of-type(6) th,
+        tr:nth-last-of-type(7) th,
+        tr:nth-last-of-type(8) th,
+        tr:nth-last-of-type(9) th,
+        tr:nth-last-of-type(10) th {
+          border-bottom: 1px solid #333;
+          border-right: 1px solid #333;
+          border-top: 1px solid #333;
+        }
+
+        tr:last-of-type th {
+          border-top: 1px solid #333;
+          border-right: 1px solid #333;
+        }
+
+        th:first-of-type {
+          vertical-align: top;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table id="DemiPension">
+      <caption>
+        </br>
+        </br>
+        </br>
+        <h1>Background-color du planning journalier en fonction de la semaine</h1>
+        </br>
+        </br>
+        <h2>Année scolaire 2020/2021</h2>
+        </br>
+        </br>
+        <h1 id="formulaire">
+          <label for="date">Choix d'une date : </label>
+          <input type="date" id="date" name="date">
+          <input type='button' onclick="QuelSemaine()" value='Validation saisie' />
+        </h1>
+        </br>
+        </br>
+        <h1 id="semaine">Semaine : </h1>
+        </p>
+      </caption>
+
+      <tr>
+        <th>&nbsp;</th>
+        <th colspan="2">lundi</th>
+        <th colspan="2">mardi</th>
+        <th colspan="2">mercredi</th>
+        <th colspan="2">jeudi</th>
+        <th colspan="2">vendredi</th>
+      </tr>
+      <tr>
+        <th>8h00</th>
+        <td colspan="2" id="l8"><B>EDUCATION MUSICALE</B><br>Mme RANAIVOSON<br><I>202</I></td>
+        <td rowspan="2" id="ma8A"><B>ED.PHYSIQUE & SPORT</B><br>Mme MUSSET<br><I>GYMNASE</I></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td id="me8B"><B>ANGLAIS LV1</B><br>Mme GIANNETA<br><I>204</I></td>
+        <td colspan="2" rowspan="2" id="j8"><B>ED.PHYSIQUE & SPORT</B><br>Mme MUSSET<br><I>GYMNASE</I></td>
+        <td colspan="2" id="v8"><B>MATHEMATIQUES</B><br>M. MARCELLE<br><I>220</I></td>
+      </tr>
+      <tr>
+        <th>9h00</th>
+        <td id="l9A"><B>PHYSIQUE-CHIMIE</B><br>Mme MAMY<br><I>216</I></td>
+        <td id="l9B"><B>ARTS PLASTIQUES</B><br>Mme KEMPF<br><I>201</I></td>
+        <td id="ma9B"><B>SCIENCES VIE & TERRE</B><br>Mme DUPONT<br><I>217</I></td>
+        <td colspan="2" id="me9"><B>FRANCAIS</B><br>Mme LEJEUNE<br><I>207</I></td>
+        <td colspan="2" id="v9"><B>FRANCAIS</B><br>Mme LEJEUNE<br><I>207</I></td>
+      </tr>
+      <tr>
+        <th>10h00</th>
+        <td colspan="2" id="l10"><B>MATHEMATIQUE</B><br>M. MARCELLE<br><I>220</I></td>
+        <td colspan="2" id="ma10"><B>ANGLAIS LV1</B><br>Mme GIANNETTA<br><I>204</I></td>
+        <td colspan="2" id="me10"><B>PHYSIQUE-CHIMIE</B><br>Mme MAMY<br><I>216</I></td>
+        <td colspan="2" id="j10"><B>ESPAGNOL LV2</B><br>Mme RODRIGUES DE BARROS<br><I>100</I></td>
+        <td colspan="2" id="v10"><B>ANGLAIS LV1</B><br>Mme GIANNETTA<br><I>204</I></td>
+      </tr>
+      <tr>
+        <th>11h00</th>
+        <td colspan="2" id="l11"><B>FRANCAIS</B><br>Mme LEJEUNE<br><I>207</I></td>
+        <td colspan="2" rowspan="2" id="ma11"><B>HANDBALL</B><br><I>CROIX-CORDIER</I></td>
+        <td id="me11A"><B>AP MATHS</B><br>Mme CHONION<br>M. MARCELLE<br><I>219.220</I></td>
+        <td>&nbsp;</td>
+        <td id="j11A"><B>ANGLAIS LV1</B><br>Mme GIANNETTA<br><I>204</I></td>
+        <td id="j11B"><B>FRANCAIS</B><br>Mme LEJEUNE<br><I>207</I></td>
+        <td id="v11A"><B>VIE DE CLASSE</B><br>Mme RANAIVOSON<br><I>202</I></td>
+        <td id="v11B"><B>AP FRANCAIS</B><br>Mme GHIONIS Mme LEJEUNE<br><I>207.211</I></td>
+      </tr>
+      <tr>
+        <th>12h00</th>
+        <td colspan="2" rowspan="2">&nbsp;</td>
+        <td colspan="2" rowspan="2">&nbsp;</td>
+        <td colspan="2" rowspan="2">&nbsp;</td>
+        <td colspan="2" rowspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <th>12h30</th>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <th>13h30</th>
+        <td id="l1330A"><B>FRANCAIS</B><br>Mme LEJEUNE<br><I>207</I></td>
+        <td id="l1330B"><B>TECHNOLOGIE</B><br>M. DOSI<br><I>227</I></td>
+        <td colspan="2" id="ma1330"><B>MATHEMATIQUES</B><br>M. MARCELLE<br><I>220</I></td>
+        <td colspan="2" rowspan="4">&nbsp;</td>
+        <td colspan="2" id="j1330"><B>HISTOIRE-GEOGRAPHIE</B><br>M. PIROUELLE<br><I>105</I></td>
+        <td colspan="2">&nbsp</td>
+      </tr>
+      <tr>
+        <th>14h30</th>
+        <td colspan="2" id="l1430"><B>ESPAGNOL LV2</B><br>Mme RODRIGUES DE BARROS<br><I>100</I></td>
+        <td colspan="2" id="ma1430"><B>TECHNOLOGIE</B><br>M. DOSI<br><I>227</I></td>
+        <td colspan="2" rowspan="2" id="j1430"><B>HANDBALL</B><br><I>CROIX-CORDIER</I></td>
+        <td colspan="2" id="v1430"><B>SCIENCES VIE & TERRE</B><br>Mme DUPONT<br><I>215</I></td>
+      </tr>
+      <tr>
+        <th>15h30</th>
+        <td colspan="2" id="l1530"><B>HISTOIRE-GEOGRAPHIE</B><br>M. PIROUELLE<br><I>105</I></td>
+        <td id="ma1530A"><B>ARTS PLASTIQUES</B><br>Mme KEMPF<br><I>201</I></td>
+        <td id="ma1530B"><B>HISTOIRE-GEOGRAPHIE</B><br>M. PIROUELLE<br><I>105</I></td>
+        <td id="v1530A"><B>HISTOIRE-GEOGRAPHIE</B><br>M. PIROUELLE<br><I>105</I></td>
+        <td id="v1530B"><B>ESPAGNOL LV2</B><br>Mme RODRIGUES DE BARROS<br><I>100</I></td>
+      </tr>
+      <tr>
+        <th>16h30</th>
+        <td colspan="2">&nbsp;</td>
+        <td colspan="2">&nbsp;</td>
+        <td colspan="2">&nbsp;</td>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <script type="text/javascript">
+        // Affichage de la date dans formulaire
+        var dateDuJour = new Date();
+        document.getElementById("date").valueAsDate = dateDuJour;
+        // Contrôle de la semaine
+        QuelSemaine();
+        // Effacer tout
+        function effaceTout() {
+          document.getElementById("l8").style.backgroundColor = 'transparent';
+          document.getElementById("l9A").style.backgroundColor = 'transparent';
+          document.getElementById("l9B").style.backgroundColor = 'transparent';
+          document.getElementById("l10").style.backgroundColor = 'transparent';
+          document.getElementById("l11").style.backgroundColor = 'transparent';
+          document.getElementById("l1330A").style.backgroundColor = 'transparent';
+          document.getElementById("l1330B").style.backgroundColor = 'transparent';
+          document.getElementById("l1430").style.backgroundColor = 'transparent';
+          document.getElementById("l1530").style.backgroundColor = 'transparent';
+          document.getElementById("ma8A").style.backgroundColor = 'transparent';
+          document.getElementById("ma9B").style.backgroundColor = 'transparent';
+          document.getElementById("ma10").style.backgroundColor = 'transparent';
+          document.getElementById("ma11").style.backgroundColor = 'transparent';
+          document.getElementById("ma1330").style.backgroundColor = 'transparent';
+          document.getElementById("ma1430").style.backgroundColor = 'transparent';
+          document.getElementById("ma1530A").style.backgroundColor = 'transparent';
+          document.getElementById("ma1530B").style.backgroundColor = 'transparent';
+          document.getElementById("me9").style.backgroundColor = 'transparent';
+          document.getElementById("me10").style.backgroundColor = 'transparent';
+          document.getElementById("me11A").style.backgroundColor = 'transparent';
+          document.getElementById("me8B").style.backgroundColor = 'transparent';
+          document.getElementById("j8").style.backgroundColor = 'transparent';
+          document.getElementById("j10").style.backgroundColor = 'transparent';
+          document.getElementById("j11A").style.backgroundColor = 'transparent';
+          document.getElementById("j1330").style.backgroundColor = 'transparent';
+          document.getElementById("j1430").style.backgroundColor = 'transparent';
+          document.getElementById("j11B").style.backgroundColor = 'transparent';
+          document.getElementById("v8").style.backgroundColor = 'transparent';
+          document.getElementById("v9").style.backgroundColor = 'transparent';
+          document.getElementById("v10").style.backgroundColor = 'transparent';
+          document.getElementById("v11A").style.backgroundColor = 'transparent';
+          document.getElementById("v1430").style.backgroundColor = 'transparent';
+          document.getElementById("v1530A").style.backgroundColor = 'transparent';
+          document.getElementById("v11B").style.backgroundColor = 'transparent';
+          document.getElementById("v1530B").style.backgroundColor = 'transparent';
+        }
+        // lundi A
+        function lundiA() {
+          document.getElementById("l8").style.backgroundColor = '#25fde9';
+          document.getElementById("l9A").style.backgroundColor = '#25fde9';
+          document.getElementById("l10").style.backgroundColor = '#25fde9';
+          document.getElementById("l11").style.backgroundColor = '#25fde9';
+          document.getElementById("l1330A").style.backgroundColor = '#25fde9';
+          document.getElementById("l1430").style.backgroundColor = '#25fde9';
+          document.getElementById("l1530").style.backgroundColor = '#25fde9';
+        }
+        // lundi B
+        function lundiB() {
+          document.getElementById("l8").style.backgroundColor = '#25fde9';
+          document.getElementById("l9B").style.backgroundColor = '#25fde9';
+          document.getElementById("l10").style.backgroundColor = '#25fde9';
+          document.getElementById("l11").style.backgroundColor = '#25fde9';
+          document.getElementById("l1330B").style.backgroundColor = '#25fde9';
+          document.getElementById("l1430").style.backgroundColor = '#25fde9';
+          document.getElementById("l1530").style.backgroundColor = '#25fde9';
+        }
+        // mardi A
+        function mardiA() {
+          document.getElementById("ma8A").style.backgroundColor = '#25fde9';
+          document.getElementById("ma10").style.backgroundColor = '#25fde9';
+          document.getElementById("ma11").style.backgroundColor = '#25fde9';
+          document.getElementById("ma1330").style.backgroundColor = '#25fde9';
+          document.getElementById("ma1430").style.backgroundColor = '#25fde9';
+          document.getElementById("ma1530A").style.backgroundColor = '#25fde9';
+        }
+        // mardi B
+        function mardiB() {
+          document.getElementById("ma9B").style.backgroundColor = '#25fde9';
+          document.getElementById("ma10").style.backgroundColor = '#25fde9';
+          document.getElementById("ma11").style.backgroundColor = '#25fde9';
+          document.getElementById("ma1330").style.backgroundColor = '#25fde9';
+          document.getElementById("ma1430").style.backgroundColor = '#25fde9';
+          document.getElementById("ma1530B").style.backgroundColor = '#25fde9';
+        }
+        // mercredi A
+        function mercrediA() {
+          document.getElementById("me9").style.backgroundColor = '#25fde9';
+          document.getElementById("me10").style.backgroundColor = '#25fde9';
+          document.getElementById("me11A").style.backgroundColor = '#25fde9';
+        }
+        // mercredi B
+        function mercrediB() {
+          document.getElementById("me8B").style.backgroundColor = '#25fde9';
+          document.getElementById("me9").style.backgroundColor = '#25fde9';
+          document.getElementById("me10").style.backgroundColor = '#25fde9';
+        }
+        // jeudi A
+        function jeudiA() {
+          document.getElementById("j8").style.backgroundColor = '#25fde9';
+          document.getElementById("j10").style.backgroundColor = '#25fde9';
+          document.getElementById("j11A").style.backgroundColor = '#25fde9';
+          document.getElementById("j1330").style.backgroundColor = '#25fde9';
+          document.getElementById("j1430").style.backgroundColor = '#25fde9';
+        }
+        // jeudi B
+        function jeudiB() {
+          document.getElementById("j8").style.backgroundColor = '#25fde9';
+          document.getElementById("j10").style.backgroundColor = '#25fde9';
+          document.getElementById("j11B").style.backgroundColor = '#25fde9';
+          document.getElementById("j1330").style.backgroundColor = '#25fde9';
+          document.getElementById("j1430").style.backgroundColor = '#25fde9';
+        }
+        // vendredi A
+        function vendrediA() {
+          document.getElementById("v8").style.backgroundColor = '#25fde9';
+          document.getElementById("v9").style.backgroundColor = '#25fde9';
+          document.getElementById("v10").style.backgroundColor = '#25fde9';
+          document.getElementById("v11A").style.backgroundColor = '#25fde9';
+          document.getElementById("v1430").style.backgroundColor = '#25fde9';
+          document.getElementById("v1530A").style.backgroundColor = '#25fde9';
+        }
+        // vendredi B
+        function vendrediB() {
+          document.getElementById("v8").style.backgroundColor = '#25fde9';
+          document.getElementById("v9").style.backgroundColor = '#25fde9';
+          document.getElementById("v10").style.backgroundColor = '#25fde9';
+          document.getElementById("v11B").style.backgroundColor = '#25fde9';
+          document.getElementById("v1430").style.backgroundColor = '#25fde9';
+          document.getElementById("v1530B").style.backgroundColor = '#25fde9';
+        }
+
+        function QuelSemaine() {
+          function dateCheck(from, to, check) {
+            var fDate, lDate, cDate;
+            fDate = Date.parse(from);
+            lDate = Date.parse(to);
+            cDate = Date.parse(check);
+            if ((cDate <= lDate && cDate >= fDate)) {
+              return true;
+            }
+            return false;
+          }
+          // Récup choix de date
+          var dateControl = document.getElementById("date").value;
+          // Quel jour de la semaine
+          const dateJ = new Date(dateControl);
+          const jour = dateJ.getDay();
+          // savoir si semaine A ou B
+          if (dateCheck("2020-09-02", "2020-09-04", dateControl) ||
+            dateCheck("2020-09-14", "2020-09-18", dateControl) ||
+            dateCheck("2020-09-28", "2020-10-02", dateControl) ||
+            dateCheck("2020-10-12", "2020-10-16", dateControl) ||
+            dateCheck("2020-11-09", "2020-11-10", dateControl) ||
+            dateCheck("2020-11-12", "2020-11-13", dateControl) ||
+            dateCheck("2020-11-23", "2020-11-27", dateControl) ||
+            dateCheck("2020-12-07", "2020-12-11", dateControl) ||
+            dateCheck("2021-01-04", "2021-01-08", dateControl) ||
+            dateCheck("2021-01-18", "2021-01-22", dateControl) ||
+            dateCheck("2021-02-01", "2021-02-05", dateControl) ||
+            dateCheck("2021-02-15", "2021-02-19", dateControl) ||
+            dateCheck("2021-03-15", "2021-03-19", dateControl) ||
+            dateCheck("2021-03-29", "2021-04-02", dateControl) ||
+            dateCheck("2021-04-12", "2021-04-16", dateControl) ||
+            dateCheck("2021-05-10", "2021-05-12", dateControl) ||
+            dateCheck("2021-05-25", "2021-05-28", dateControl) ||
+            dateCheck("2021-06-07", "2021-06-11", dateControl) ||
+            dateCheck("2021-06-21", "2021-06-25", dateControl) ||
+            dateCheck("2021-07-05", "2021-07-06", dateControl)) {
+            document.getElementById("semaine").innerHTML = "Semaine : A";
+            effaceTout();
+            if (jour === 1) {
+              lundiA();
+            } else if (jour === 2) {
+              mardiA()
+            } else if (jour === 3) {
+              mercrediA()
+            } else if (jour === 4) {
+              jeudiA()
+            } else if (jour === 5) {
+              vendrediA()
+            }
+          } else if (dateCheck("2020-09-07", "2020-09-11", dateControl) ||
+            dateCheck("2020-09-21", "2020-09-25", dateControl) ||
+            dateCheck("2020-10-05", "2020-10-09", dateControl) ||
+            dateCheck("2020-11-02", "2020-11-06", dateControl) ||
+            dateCheck("2020-11-16", "2020-11-20", dateControl) ||
+            dateCheck("2020-11-30", "2020-12-04", dateControl) ||
+            dateCheck("2020-12-14", "2020-12-18", dateControl) ||
+            dateCheck("2021-01-11", "2021-01-15", dateControl) ||
+            dateCheck("2021-01-25", "2021-01-29", dateControl) ||
+            dateCheck("2021-02-08", "2021-02-12", dateControl) ||
+            dateCheck("2021-03-08", "2021-03-12", dateControl) ||
+            dateCheck("2021-03-22", "2021-03-26", dateControl) ||
+            dateCheck("2021-04-06", "2021-04-09", dateControl) ||
+            dateCheck("2021-04-19", "2021-04-23", dateControl) ||
+            dateCheck("2021-05-17", "2021-05-21", dateControl) ||
+            dateCheck("2021-05-31", "2021-06-04", dateControl) ||
+            dateCheck("2021-06-14", "2021-06-18", dateControl) ||
+            dateCheck("2021-06-28", "2021-07-02", dateControl)) {
+            document.getElementById("semaine").innerHTML = "Semaine : B";
+            effaceTout();
+            if (jour === 1) {
+              lundiB();
+            } else if (jour === 2) {
+              mardiB()
+            } else if (jour === 3) {
+              mercrediB()
+            } else if (jour === 4) {
+              jeudiB()
+            } else if (jour === 5) {
+              vendrediB()
+            }
+          } else {
+            document.getElementById("semaine").innerHTML = "Semaine : ";
+            effaceTout();
+          }
+        }
+      </script>
+
+  </body>
+
+  </html>
